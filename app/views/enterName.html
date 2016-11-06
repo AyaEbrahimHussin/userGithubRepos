@@ -1,0 +1,25 @@
+<div class="enterNameWrapper">
+  <div class="enterNameContainer">
+    <a class="goToGitHub" href="https://github.com/" target="_blank">
+      <i class="ion ion-social-github"></i>
+    </a>
+    <h2>Get all your repositories on GitHub</h2>
+    <form name="enterUserNameForm" novalidate  ng-submit="getRepos(enterUserNameForm.$valid)">
+      <label class="formLabel">Username</label>
+      <input required type="text" class="userName" name="userName" ng-model="userName"
+             ng-class="{ 'has-error' : enterUserNameForm.$submitted && enterUserNameForm.userName.$invalid}"/>
+      <div class="error" ng-show="enterUserNameForm.$submitted || enterUserNameForm.userName.$touched">
+        <div ng-show="enterUserNameForm.userName.$error.required">Your username is required</div>
+      </div>
+      <button class="btn submitUserName" type="submit">Get My Repos</button>
+    </form>
+
+    <!--==== show when there's a server error ====-->
+    <div class="alert alert-danger" role="alert" ng-show="showAlert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      {{errorMessage}}
+    </div>
+  </div>
+
+</div>

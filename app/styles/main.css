@@ -1,0 +1,152 @@
+
+@font-face {
+  font-family: 'FranklinGothicBookRegular';
+  src: url("../fonts/FranklinGothicBookRegular.woff") format("woff"), url("../fonts/FranklinGothicBookRegular.ttf") format("truetype"); }
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  position: relative;
+  font-family: FranklinGothicBookRegular;
+  color: #333;
+  height: 100%; }
+
+.mainWrapper {
+  height: 100%; }
+  .mainWrapper .enterNameWrapper {
+    display: flex;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background-color: #F9F9F9; }
+    .mainWrapper .enterNameWrapper .enterNameContainer {
+      margin: 0 auto; }
+      .mainWrapper .enterNameWrapper .enterNameContainer a.goToGitHub {
+        text-align: center;
+        display: block; }
+        .mainWrapper .enterNameWrapper .enterNameContainer a.goToGitHub i {
+          color: #333;
+          font-size: 5rem; }
+      .mainWrapper .enterNameWrapper .enterNameContainer h2 {
+        font-size: 3rem;
+        width: 80%;
+        margin: 20px auto 10px; }
+      .mainWrapper .enterNameWrapper .enterNameContainer form {
+        text-align: center;
+        background: #fff;
+        padding: 5%;
+        width: 80%;
+        margin: 20px auto 0;
+        border: 1px solid #D8DEE2;
+        border-radius: 5px; }
+        .mainWrapper .enterNameWrapper .enterNameContainer form .formLabel {
+          display: block;
+          text-align: left;
+          font-weight: normal;
+          font-size: 1.6rem; }
+        .mainWrapper .enterNameWrapper .enterNameContainer form input {
+          display: block;
+          margin: 5px auto 0;
+          width: 100%;
+          height: 32px;
+          border-radius: 3px;
+          border: 1px solid #D8DEE2;
+          padding: 0 3px; }
+        .mainWrapper .enterNameWrapper .enterNameContainer form input.has-error {
+          border-color: #ee001a; }
+        .mainWrapper .enterNameWrapper .enterNameContainer form .submitUserName {
+          display: block;
+          background-color: #5AAD35;
+          background-image: linear-gradient(#6dcb3e, #5AAD35);
+          border-color: #5AAD35;
+          width: 100%;
+          color: #fff;
+          border-radius: 5px;
+          margin-top: 20px;
+          font-size: 1.6rem; }
+        .mainWrapper .enterNameWrapper .enterNameContainer form .btn:active, .mainWrapper .enterNameWrapper .enterNameContainer form .btn:focus {
+          outline: 0; }
+        .mainWrapper .enterNameWrapper .enterNameContainer form .error {
+          color: #ee001a;
+          padding: 0;
+          width: 100%;
+          margin: 0;
+          display: block;
+          text-align: left; }
+      .mainWrapper .enterNameWrapper .enterNameContainer .alert {
+        padding: 8px 10px;
+        margin-top: 25px;
+        text-align: center;
+        font-size: 1.7rem;
+        color: #ee001a;
+        border-color: rgba(238, 0, 26, 0.1); }
+  .mainWrapper .allRepositories {
+    padding-bottom: 50px; }
+    .mainWrapper .allRepositories .loggedInHeader {
+      background-color: #F9F9F9;
+      padding: 5px 5%; }
+      .mainWrapper .allRepositories .loggedInHeader a.goToGitHub {
+        color: #333; }
+        .mainWrapper .allRepositories .loggedInHeader a.goToGitHub i {
+          font-size: 5rem; }
+      .mainWrapper .allRepositories .loggedInHeader img {
+        width: 50px;
+        border-radius: 50%; }
+      .mainWrapper .allRepositories .loggedInHeader a.logout {
+        margin-left: 1%;
+        color: #4078C0;
+        margin-top: 15px; }
+        .mainWrapper .allRepositories .loggedInHeader a.logout i {
+          font-size: 2.2rem; }
+    .mainWrapper .allRepositories h2 {
+      padding: 5px 5%; }
+    .mainWrapper .allRepositories .repoItems {
+      padding: 5px calc(5% - 15px);
+      margin: 0; }
+      .mainWrapper .allRepositories .repoItems .repoItem {
+        border: 1px solid #D8DEE2;
+        border-radius: 5px;
+        padding: 0;
+        margin-bottom: 30px; }
+        .mainWrapper .allRepositories .repoItems .repoItem .repoTitle {
+          padding: 0 15px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        .mainWrapper .allRepositories .repoItems .repoItem .extraInfo {
+          border-top: 1px solid #D8DEE2;
+          background-color: #F9F9F9;
+          padding: 0 15px;
+          border-radius: 0 0 6px 6px; }
+        .mainWrapper .allRepositories .repoItems .repoItem .repoDesc {
+          display: block;
+          margin-bottom: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          height: 20px; }
+        .mainWrapper .allRepositories .repoItems .repoItem .repoLanguage {
+          margin-right: 5%;
+          margin-bottom: 0; }
+        .mainWrapper .allRepositories .repoItems .repoItem .forksCount {
+          margin-bottom: 0; }
+        .mainWrapper .allRepositories .repoItems .repoItem .goToRepo {
+          margin-bottom: 0;
+          display: block;
+          padding-bottom: 6px;
+          text-align: right;
+          font-size: 1.5rem; }
+    .mainWrapper .allRepositories .noRepos {
+      text-align: center;
+      color: #D8DEE2; }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 54%; }
+
+  .mainWrapper .allRepositories .loggedInHeader a.logout {
+    margin-left: 4%; } }
+
+/*# sourceMappingURL=main.css.map */

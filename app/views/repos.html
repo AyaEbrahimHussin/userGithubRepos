@@ -1,0 +1,30 @@
+<div class="allRepositories">
+  <div class="loggedInHeader">
+    <a class="goToGitHub pull-left" href="https://github.com/" target="_blank">
+      <i class="ion ion-social-github"></i>
+    </a>
+    <a class="logout pull-right" ng-click="logout()" target="_blank">
+      <i class="ion ion-power"></i>
+    </a>
+    <!--<img title="user image" class="pull-right" src={{userRepos[0].owner.avatar_url}} alt="" >-->
+    <img title="user image" class="pull-right" ng-src={{userRepos[0].owner.avatar_url!=null?userRepos[0].owner.avatar_url:'https://avatars0.githubusercontent.com/u/11156529?v=3&s=466'}} alt="" >
+    <div class="clearfix"></div>
+  </div>
+  <h2>{{userName}}'s GitHub repositories ({{repoCount}})</h2>
+
+  <div class="repoItems row">
+    <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12" ng-repeat="item in userRepos">
+      <div class="repoItem ">
+        <h3 class="repoTitle">{{item.name}}</h3>
+        <div class="extraInfo">
+          <p class="repoDesc">{{item.description}}</p>
+          <label class="repoLanguage">{{item.language}}</label>
+          <label class="forksCount">{{item.forks_count}} forks</label>
+          <a href={{item.svn_url}} class="goToRepo" target="_blank">Go to Repo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <h2 class="noRepos"  ng-show="showAlert">{{errorMessage}}</h2>
+</div>

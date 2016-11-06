@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'BonvenoCFLight';
+  src:url('../fonts/BonvenoCFLight.woff') format('woff'),url("../fonts/BonvenoCFLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'FranklinGothicBookRegular';
+  src:url('../fonts/FranklinGothicBookRegular.woff') format('woff'),url("../fonts/FranklinGothicBookRegular.ttf") format("truetype");
+}
+
+$franklinGothicBookRegular:FranklinGothicBookRegular;
+$bonvenoCFLight:BonvenoCFLight;
+$lightGray:#F9F9F9;
+$borderGray:#D8DEE2;
+$mainRed: #ee001a;
+$lightBlue:#4078C0;
+$lightGreen:#5AAD35;
+$lighterGreen: #6dcb3e;
+$textColor:#333;
+$yellow:#f1e05a;
+
+html{
+  font-size: 62.5%;
+  height: 100%;
+}
+body{
+  position: relative;
+  font-family: $franklinGothicBookRegular;
+  color:$textColor;
+  height: 100%;
+
+}
+
+
+.mainWrapper{
+  height: 100%;
+  .enterNameWrapper{
+    display: flex;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background-color: $lightGray;
+    .enterNameContainer{
+      margin: 0 auto;
+      a.goToGitHub{
+        text-align: center;
+        display: block;
+        i{
+          color:$textColor;
+          font-size: 5rem;
+        }
+      }
+      h2{
+        font-size: 3rem;
+        width: 80%;
+        margin: 20px auto 10px;
+      }
+      form{
+        text-align: center;
+        background: #fff;
+        padding: 5%;
+        width: 80%;
+        margin: 20px auto 0;
+        border: 1px solid $borderGray;
+        border-radius: 5px;
+        .formLabel{
+          display: block;
+          text-align: left;
+          font-weight: normal;
+          font-size: 1.6rem;
+        }
+        input{
+          display: block;
+          margin: 5px auto 0;
+          width: 100%;
+          height: 32px;
+          border-radius: 3px;
+          border: 1px solid $borderGray;
+          padding: 0 3px;
+        }
+        input.has-error{
+          border-color:$mainRed;
+        }
+        .submitUserName{
+          display: block;
+          background-color: $lightGreen;
+          background-image: linear-gradient($lighterGreen, $lightGreen);
+          border-color: $lightGreen;
+          width: 100%;
+          color:#fff;
+          border-radius: 5px;
+          margin-top: 20px;
+          font-size: 1.6rem;
+        }
+        .btn:active, .btn:focus{
+          outline: 0;
+        }
+        .error{
+          color:$mainRed;
+          padding: 0;
+          width: 100%;
+          margin: 0;
+          display: block;
+          text-align: left;
+        }
+      }
+      .alert{
+        padding: 8px 10px;
+        margin-top: 25px;
+        text-align: center;
+        font-size: 1.7rem;
+        color:$mainRed;
+        border-color:rgba(238, 0, 26, 0.1);
+      }
+    }
+  }
+  .allRepositories{
+    padding-bottom: 50px;
+    .loggedInHeader{
+      background-color: $lightGray;
+      padding: 5px 5%;
+      a.goToGitHub{
+        color:$textColor;
+        i{
+          font-size: 5rem;
+        }
+      }
+      img{
+        width: 50px;
+        border-radius: 50%;
+      }
+      a.logout{
+        margin-left: 1%;
+        color:$lightBlue;
+        margin-top: 15px;
+        i{
+          font-size: 2.2rem;
+        }
+      }
+    }
+    h2{
+      padding: 5px 5%;
+    }
+    .repoItems{
+      padding: 5px calc(5% - 15px);
+      margin: 0;
+      .repoItem{
+        border:1px solid $borderGray;
+        border-radius: 5px;
+        padding: 0;
+        margin-bottom: 30px;
+        .repoTitle{
+          padding: 0 15px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .extraInfo{
+          border-top:1px solid $borderGray;
+          background-color: $lightGray;
+          padding: 0 15px;
+          border-radius: 0 0 6px 6px;
+        }
+        .repoDesc{
+          display: block;
+          margin-bottom: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          height: 20px;
+        }
+        .repoLanguage{
+          margin-right: 5%;
+          margin-bottom: 0;
+        }
+
+        .forksCount{
+          margin-bottom: 0;
+        }
+        .goToRepo{
+          margin-bottom: 0;
+          display: block;
+          padding-bottom: 6px;
+          text-align: right;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .noRepos{
+      text-align: center;
+      color:$borderGray;
+    }
+  }
+}
+
+
+@media (max-width: 768px){
+  html{
+    font-size: 54%;
+  }
+  .mainWrapper .allRepositories .loggedInHeader a.logout {
+    margin-left: 4%;
+  }
+}
